@@ -15,6 +15,10 @@
         Console.Write("Modification v2");
         Console.Write("Modification v3");
 
+        Console.WriteLine();
+        double max = FindMax(numbers);
+        Console.WriteLine($"max number: {max}");
+
     }
     
     
@@ -33,5 +37,24 @@
         }
 
         return (double)sum / array.Length;
+    }
+    
+    static int FindMax(int[] array)
+    {
+        if (array == null || array.Length == 0)
+        {
+            Console.Write("No values within the array");
+        }
+
+        int max = array[0];
+        for (int i = 1; i < array.Length; i++)
+        {
+            if (array[i] > max)
+            {
+                max = array[i];
+            }
+        }
+
+        return max;
     }
 }
