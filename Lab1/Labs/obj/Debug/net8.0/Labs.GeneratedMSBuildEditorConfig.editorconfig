@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Labs
-build_property.ProjectDir = /Users/aorgan/PJATK/Sem6/APBD/Cwiczenia/apbd_repository/Lab1/Labs/
+build_property.ProjectDir = /Users/aorgan/PJATK/Sem6/APBD/Cwiczenia/apbd_repository/apbd_repository/Lab1/Labs/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

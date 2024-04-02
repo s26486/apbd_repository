@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aorgan/PJATK/Sem6/APBD/Cwiczenia/apbd_repository/Lab1/Labs/Labs.csproj",
+      "projectUniqueName": "/Users/aorgan/PJATK/Sem6/APBD/Cwiczenia/apbd_repository/apbd_repository/Lab1/Labs/Labs.csproj",
       "projectName": "Labs",
-      "projectPath": "/Users/aorgan/PJATK/Sem6/APBD/Cwiczenia/apbd_repository/Lab1/Labs/Labs.csproj",
+      "projectPath": "/Users/aorgan/PJATK/Sem6/APBD/Cwiczenia/apbd_repository/apbd_repository/Lab1/Labs/Labs.csproj",
       "packagesPath": "/Users/aorgan/.nuget/packages/",
-      "outputPath": "/Users/aorgan/PJATK/Sem6/APBD/Cwiczenia/apbd_repository/Lab1/Labs/obj/",
+      "outputPath": "/Users/aorgan/PJATK/Sem6/APBD/Cwiczenia/apbd_repository/apbd_repository/Lab1/Labs/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/aorgan/.nuget/NuGet/NuGet.Config"
