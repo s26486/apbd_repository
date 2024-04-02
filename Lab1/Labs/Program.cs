@@ -5,3 +5,4 @@ Console.WriteLine("Changing code v2");
 Console.WriteLine("Final changes v3");
 
 Console.Write("Modification v1");
+Console.Write("Modification v2");
