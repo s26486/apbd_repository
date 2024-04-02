@@ -31,9 +31,9 @@
         }
 
         int sum = 0;
-        foreach (int num in array)
+        foreach (int n in array)
         {
-            sum += num;
+            sum += n;
         }
 
         return (double)sum / array.Length;
