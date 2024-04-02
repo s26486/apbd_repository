@@ -18,6 +18,8 @@
         Console.WriteLine();
         double max = FindMax(numbers);
         Console.WriteLine($"max number: {max}");
+        
+        
 
     }
     
@@ -31,9 +33,11 @@
         }
 
         int sum = 0;
-        foreach (int n in array)
+
+        foreach (int number in array)
         {
-            sum += n;
+            sum += number;
+
         }
 
         return (double)sum / array.Length;
