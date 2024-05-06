@@ -24,7 +24,7 @@ public class Program
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API Name", Version = "v1" });
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "Animals", Version = "v1" });
         });
         services.AddControllers();
 
@@ -39,7 +39,7 @@ public class Program
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API Name v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Animals v1");
             });
         }
 
