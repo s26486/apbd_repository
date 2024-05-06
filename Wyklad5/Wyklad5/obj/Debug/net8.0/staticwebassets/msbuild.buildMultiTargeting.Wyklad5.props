@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Wyklad5.props" />
+</Project>
