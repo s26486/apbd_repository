@@ -1,5 +1,6 @@
 using Lab4_s26486.Models;
-using Lab4_s26486.Models;
+using Microsoft.Extensions.Configuration;
+using System;
 using System.Data.SqlClient;
 
 namespace Lab4_s26486.Repository
@@ -10,7 +11,8 @@ namespace Lab4_s26486.Repository
 
         public WarehouseRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection");
+            _connectionString = configuration.GetConnectionString("DefaultConnection")
+                                ?? throw new ArgumentNullException(nameof(configuration));
         }
 
         public Warehouse GetById(int id)
@@ -29,8 +31,8 @@ namespace Lab4_s26486.Repository
                             return new Warehouse
                             {
                                 IdWarehouse = Convert.ToInt32(reader["IdWarehouse"]),
-                                Name = reader["Name"].ToString(),
-                                Address = reader["Address"].ToString()
+                                Name = reader["Name"]?.ToString(),
+                                Address = reader["Address"]?.ToString()
                             };
                         }
                         return null;

@@ -17,29 +17,31 @@ public class InventoryService
         OrderService orderService,
         WarehouseService warehouseService,
         IOrderRepository orderRepository,
-        IProductWarehouseRepository productWarehouseRepository)
+        IProductWarehouseRepository productWarehouseRepository,
+        IProductRepository productRepository)
     {
         _productService = productService;
         _orderService = orderService;
         _warehouseService = warehouseService;
         _orderRepository = orderRepository;
         _productWarehouseRepository = productWarehouseRepository;
+        _productRepository = productRepository;
     }
 
     public void AddProductToWarehouse(InventoryRequest inventoryRequest)
     {
         if (!_productService.Exists(inventoryRequest.IdProduct))
             throw new Exception("Nie znaleziono produtku o podanym id");
-        
+
         if (!_warehouseService.Exists(inventoryRequest.IdWarehouse))
             throw new Exception("Nie znaleziono magayznu o podanym id");
-        
+
         if (inventoryRequest.Amount <= 0 || inventoryRequest == null)
             throw new Exception("Niepoprawna ilosc");
-        
+
         if (!_orderService.Exists(inventoryRequest.IdOrder))
             throw new Exception("Nie znaleziono zamowienia o podanym id");
-        
+
         _orderRepository.UpdateFullFilledAt(inventoryRequest.IdOrder, DateTime.Now);
         var productWarehouse = new ProductWarehouse
         {
@@ -66,5 +68,4 @@ public class InventoryService
             throw new Exception($"Nie znaleziono produktu o id :  {productId}");
         }
     }
-
 }

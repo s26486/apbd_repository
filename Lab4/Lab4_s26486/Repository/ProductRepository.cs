@@ -9,7 +9,8 @@ namespace Lab4_s26486.Repository
 
         public ProductRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection");
+            _connectionString = configuration.GetConnectionString("DefaultConnection")
+                                ?? throw new ArgumentNullException(nameof(configuration));
         }
 
         public Product GetById(int id)
@@ -28,8 +29,8 @@ namespace Lab4_s26486.Repository
                             return new Product
                             {
                                 IdProduct = Convert.ToInt32(reader["IdProduct"]),
-                                Name = reader["Name"].ToString(),
-                                Description = reader["Description"].ToString(),
+                                Name = reader["Name"]?.ToString(),
+                                Description = reader["Description"]?.ToString(),
                                 Price = Convert.ToDecimal(reader["Price"])
                             };
                         }

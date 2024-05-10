@@ -10,7 +10,8 @@ namespace Lab4_s26486.Repository
 
         public OrderRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection");
+            _connectionString = configuration.GetConnectionString("DefaultConnection")
+                                ?? throw new ArgumentNullException(nameof(configuration));
         }
 
         public Order GetById(int id)
@@ -32,7 +33,7 @@ namespace Lab4_s26486.Repository
                                 IdProduct = Convert.ToInt32(reader["IdProduct"]),
                                 Amount = Convert.ToInt32(reader["Amount"]),
                                 CreatedAt = Convert.ToDateTime(reader["CreatedAt"]),
-                                FullFilledAt = reader["FulfilledAt"] != DBNull.Value ? Convert.ToDateTime(reader["FulfilledAt"]) : default(DateTime)
+                                FullFilledAt = reader["FulfilledAt"] != DBNull.Value ? Convert.ToDateTime(reader["FulfilledAt"]) : default(DateTime?)
                             };
                         }
                         return null;
