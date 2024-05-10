@@ -1,4 +1,5 @@
 using Lab4_s26486.Models;
+using Lab4_s26486.Models;
 using System.Data.SqlClient;
 
 namespace Lab4_s26486.Repository

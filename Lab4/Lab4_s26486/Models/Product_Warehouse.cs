@@ -7,6 +7,6 @@ public class ProductWarehouse
     public int IdProduct { get; set; }
     public int IdOrder { get; set; }
     public int Amount { get; set; }
-    public double Price { get; set; }
+    public decimal Price { get; set; }
     public DateTime CreatedAt { get; set; }
 }

@@ -53,7 +53,7 @@ public class InventoryService
         _productWarehouseRepository.Add(productWarehouse);
     }
 
-    private double CalculatePrice(int productId)
+    private decimal CalculatePrice(int productId)
     {
         var product = _productRepository.GetById(productId);
 
