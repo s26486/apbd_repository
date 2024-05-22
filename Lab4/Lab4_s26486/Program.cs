@@ -12,9 +12,13 @@ public class Program
         builder.Services.AddSingleton<OrderService>(); 
 
         builder.Services.AddSingleton<IProductRepository, ProductRepository>();
-        builder.Services.AddSingleton<IProductWarehouseRepository, ProductWarehouseRepository>();
-        builder.Services.AddSingleton<IWarehouseRepository, WarehouseRepository>();
+        builder.Services.AddSingleton<ProductService>();
+        
+        builder.Services.AddSingleton<IWarehouseService, WarehouseService>();
+        builder.Services.AddSingleton<WarehouseService>();
 
+        builder.Services.AddSingleton<IWarehouseService, WarehouseService>();
+        
         builder.Services.AddSingleton<ProductService>();
         builder.Services.AddSingleton<InventoryService>();
 

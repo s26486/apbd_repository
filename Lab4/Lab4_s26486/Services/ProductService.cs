@@ -2,7 +2,7 @@ using Lab4_s26486.Repository;
 
 namespace Lab4_s26486.Services;
 
-public class ProductService
+public class ProductService : IProductService
 {
     private readonly IProductRepository _productRepository;
 

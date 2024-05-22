@@ -2,7 +2,7 @@ using Lab4_s26486.Repository;
 
 namespace Lab4_s26486.Services;
 
-public class WarehouseService
+public class WarehouseService : IWarehouseService
 {
     private readonly IWarehouseRepository _warehouseRepository;
 
@@ -13,6 +13,6 @@ public class WarehouseService
 
     public bool Exists(int id)
     {
-        return true;
+        return _warehouseRepository.GetById(id) != null;
     }
 }

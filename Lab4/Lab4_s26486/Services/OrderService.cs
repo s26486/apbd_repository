@@ -2,7 +2,7 @@ using Lab4_s26486.Repository;
 
 namespace Lab4_s26486.Services;
 
-public class OrderService
+public class OrderService : IOrderService
 {
     private readonly IOrderRepository _orderRepository;
 
